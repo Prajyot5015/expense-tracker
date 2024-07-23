@@ -21,6 +21,7 @@ const router = createBrowserRouter([
     path : "/login",
     element : <Login />
   },
+ 
   {
     path : "*",
     element : <h1>Not Found</h1>
