@@ -57,6 +57,30 @@ app.post("/signup", async (req, res) => {
 
 })
 
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({
+        email: email,
+        password: password
+    });
+
+    if (user) {
+        return res.json({
+            success: true,
+            message: "Login Successfully",
+            data: user
+        })
+    }
+    else {
+        return res.json({
+            success: false,
+            message: "Invalid credentials",
+            data: null
+        })
+    }
+})
+
 
 const PORT = process.env.PORT || 8000;
 
