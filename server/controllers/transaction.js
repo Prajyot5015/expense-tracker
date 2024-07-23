@@ -52,4 +52,16 @@ const getTransaction = async (req, res)=>{
     })
 }
 
-export {postTransaction, getTransaction}
+const deleteTransaction = async (req, res)=>{
+    const {id} = req.params;
+
+    await Transaction.deleteOne({_id: id})
+
+    return  res.json({
+        success: true,
+        message: `Transaction Deleted Successfully`,
+        data: null
+    })
+}
+
+export {postTransaction, getTransaction, deleteTransaction}
