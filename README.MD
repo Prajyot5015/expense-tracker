@@ -54,7 +54,6 @@ The Expense Tracker App is a web application that helps users manage their perso
 - `POST /api/login` - Log in a user
 
 ### Transactions
-- `GET /api/transactions` - Get all transactions for the logged-in user
-- `POST /api/transactions` - Create a new transaction
-- `PUT /api/transactions/:id` - Update an existing transaction
-- `DELETE /api/transactions/:id` - Delete a transaction
+- `POST /api/transaction` - Get all transactions for the logged-in user
+- `GET /api/transactions` - Create a new transaction
+- `DELETE /api/transaction/:id` - Update an existing transaction
