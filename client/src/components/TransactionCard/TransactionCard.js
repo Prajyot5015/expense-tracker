@@ -11,6 +11,7 @@ function TransactionCard({ _id, title, amount, category, type, createdAt, loadTr
 
     loadTransactions()
   }
+  
 
   return (
     <div className="transaction-card">

@@ -1,9 +1,6 @@
 .transaction-card{
-    border: 1px solid #f0f0f0;
-    margin: 10px 30px;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #f0f0f0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
   }
   

@@ -60,7 +60,7 @@ function Home() {
     }, [transactions])
 
     return (
-        <div>
+        <div className='main-container'>
             <h1 className='home-greeting'>Hello {user.fullName}</h1>
             <h2 className='home-heading'>Welcome to the Expense Tracker</h2>
 
@@ -76,7 +76,6 @@ function Home() {
             </span>
 
             <div className='net-transactions-values'>
-
                 <div className='net-transactions-value-item'>
                     <span className='net-transactions-value-amount'>
                         + {netIncome}
@@ -103,7 +102,6 @@ function Home() {
                         Net Balance
                     </span>
                 </div>
-
             </div>
 
             <div className='transactions-container'>
@@ -123,11 +121,11 @@ function Home() {
                         />)
                     })
                 }
+                <Link to='/add-transaction'>
+                    <img src={ImgAdd} alt='Add Transaction' className='add-transaction' />
+                </Link>
             </div>
 
-            <Link to='/add-transaction'>
-                <img src={ImgAdd} alt='Add Transaction' className='add-transaction' />
-            </Link>
 
             <Toaster />
         </div>
